@@ -3,7 +3,7 @@
  */
 /**
  * find user who have the property `isActive` set to true
- * @param {Array.<Object>} users
+ * @param {import('../types/user.type').User[]} users
  */
 export const findActive = (users) => {
 
@@ -15,7 +15,7 @@ export const findActive = (users) => {
  * use find() and some() methods
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
  *
- * @param {Array.<Object>} users
+ * @param {import('../types/user.type').User[]} users
  * @param {String} fiendName
  */
 export const findByUserFriendName = (users, fiendName) => {

@@ -1,6 +1,6 @@
 import {describe, it} from "node:test";
 import assert from "node:assert"
-import {findActive, findByUserFriendName} from "../find.js";
+import { findActive, findByUserFriendName } from "../exercises/find.js";
 import {users} from "../data/source-data.js";
 
 

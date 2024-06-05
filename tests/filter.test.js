@@ -6,7 +6,7 @@ import {
     getUsersByFavoriteFruit,
     getUsersByGender,
     getUsersWithUnreadMessages
-} from "../filter.js";
+} from "../exercises/filter.js";
 
 describe("filter", () => {
     it("should return users with the green eye color", () => {

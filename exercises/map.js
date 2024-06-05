@@ -10,7 +10,7 @@
  *     ... rest of the fields
  * }
  *
- * @param {Array<*>} users
+ * @param {import('../types/user.type').User[]} users
  */
 export const mapBalance = (users) => {
 
@@ -31,7 +31,7 @@ export const mapBalance = (users) => {
  *     ... rest of the properties
  * }
  *
- * @param {Array.<object>} users
+ * @param {import('../types/user.type').User[]} users
  */
 export const mapTagsAndFriends = (users) => {
 

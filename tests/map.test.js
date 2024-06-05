@@ -1,7 +1,7 @@
 import {describe, it, beforeEach} from "node:test";
 import assert from "node:assert"
 import {users} from "../data/source-data.js";
-import {mapBalance, mapTagsAndFriends} from "../map.js";
+import { mapBalance, mapTagsAndFriends } from "../exercises/map.js";
 
 describe('map', () => {
     let mockUsers

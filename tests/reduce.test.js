@@ -1,12 +1,12 @@
 import {describe, it} from "node:test";
 import assert from "node:assert"
 import {
-    aggregateByName,
-    aggregateByNameAndAge,
-    findBiggestTagHolder,
-    findTheLongestDescription,
-    findTheMostLonelyUser
-} from "../reduce.js";
+  aggregateByName,
+  aggregateByNameAndAge,
+  findBiggestTagHolder,
+  findTheLongestDescription,
+  findTheMostLonelyUser,
+} from "../exercises/reduce.js";
 import {users} from "../data/source-data.js";
 
 describe('reduce', () => {

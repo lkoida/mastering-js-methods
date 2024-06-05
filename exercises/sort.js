@@ -1,5 +1,3 @@
-import {users} from "./data/source-data.js";
-
 /**
  use this method: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted
  **/

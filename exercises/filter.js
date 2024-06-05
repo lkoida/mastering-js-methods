@@ -4,7 +4,7 @@
  * It should throw an error if the color provided in not exist in allowed colors of eyes
  * possible colors are: blue/brown/green
  *
- * @param {Array<*>} users
+ * @param {import('../types/user.type').User[]} users
  * @param {('blue'|'brown'|'green')} color
  */
 export const getByEyesColor = (users, color) => {
@@ -23,7 +23,7 @@ export const getByEyesColor = (users, color) => {
  *
  * possible genders are: male/female
  *
- * @param {Array.<object>} users
+ * @param {import('../types/user.type').User[]} users
  * @param {("male" | "female")} gender
  */
 export const getUsersByGender = (users, gender) => {
@@ -41,7 +41,7 @@ export const getUsersByGender = (users, gender) => {
  * possible genders are: male/female
  * possible fruits are: apple/banana/strawberry
  *
- * @param {Array.<object>} users
+ * @param {import('../types/user.type').User[]} users
  * @param  {('apple'|'banana'|'strawberry')} favoriteFruit
  * @param {('male'|'female')} gender
  */
@@ -51,7 +51,7 @@ export const getUsersByFavoriteFruit = (users, favoriteFruit, gender) => {
 
 /**
  * filter the users by unread messages (you can find them in the `greeting` property value)
- * @param {Array.<object>} users
+ * @param {import('../types/user.type').User[]} users
  */
 export const getUsersWithUnreadMessages = (users) => {
 

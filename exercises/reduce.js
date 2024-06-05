@@ -4,7 +4,7 @@
 
 /**
  * find user who have the biggest amount of tags
- * @param {Array<*>} users
+ * @param {import('../types/user.type').User[]} users
  * @returns {*}
  */
 export const findBiggestTagHolder = (users) => {
@@ -13,7 +13,7 @@ export const findBiggestTagHolder = (users) => {
 
 /**
  * find the user who have the fewest number of friends
- * @param {Array<*>} users
+ * @param {import('../types/user.type').User[]} users
  * @returns {*}
  */
 export const findTheMostLonelyUser = (users) => {
@@ -22,7 +22,7 @@ export const findTheMostLonelyUser = (users) => {
 
 /**
  * find user who have the longest description
- * @param {Array<*>} users
+ * @param {import('../types/user.type').User[]} users
  * @returns {*}
  */
 export const findTheLongestDescription = (users) => {
