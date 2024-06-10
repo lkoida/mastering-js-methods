@@ -53,5 +53,10 @@ export const aggregateByNameAndAge = (users) => {
 
 }
 
-
-
+/**
+ * How many years did all the inventors live all together?
+ * @param {import('../types/inventor.type').Inventor[]} inventors
+ */
+export const totalYearsOfLive = (inventors) => {
+  
+}

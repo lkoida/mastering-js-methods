@@ -43,3 +43,13 @@ export const sortedByTagsDesc = (users) => {};
  */
 
 export const sortedByBalanceDesc = (users) => {};
+
+/**
+ * Sort the inventors by birthdate, oldest to youngest
+ * @param {import('../types/inventor.type').Inventor} inventors
+ */
+export const sortedInventorsOldestYoungest = (inventors) => {
+    
+};
+
+

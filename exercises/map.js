@@ -12,9 +12,7 @@
  *
  * @param {import('../types/user.type').User[]} users
  */
-export const mapBalance = (users) => {
-
-}
+export const mapBalance = (users) => {};
 
 /**
  * using map() method
@@ -33,6 +31,16 @@ export const mapBalance = (users) => {
  *
  * @param {import('../types/user.type').User[]} users
  */
-export const mapTagsAndFriends = (users) => {
+export const mapTagsAndFriends = (users) => {};
 
-}
+/**
+ *  Give us an array of the inventors first and last names
+ *
+ * @param {import('../types/inventor.type').Inventor[]} inventors
+ */
+export const getFirstlastNameOfInventors = (inventors) => {
+  return inventors.map((inventor) => {
+    return `${inventor.first} ${inventor.last}`;
+  });
+};
+

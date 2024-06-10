@@ -8,11 +8,10 @@
  * @param {('blue'|'brown'|'green')} color
  */
 export const getByEyesColor = (users, color) => {
-    if (!['blue', 'brown', 'green'].includes(color)) {
-        throw new Error("this eye color is not exist")
-    }
-
-}
+  if (!["blue", "brown", "green"].includes(color)) {
+    throw new Error("this eye color is not exist");
+  }
+};
 
 /**
  * filter the users by gender
@@ -26,9 +25,7 @@ export const getByEyesColor = (users, color) => {
  * @param {import('../types/user.type').User[]} users
  * @param {("male" | "female")} gender
  */
-export const getUsersByGender = (users, gender) => {
-
-}
+export const getUsersByGender = (users, gender) => {};
 
 /**
  * filter the users by favorite fruit and gender
@@ -45,15 +42,20 @@ export const getUsersByGender = (users, gender) => {
  * @param  {('apple'|'banana'|'strawberry')} favoriteFruit
  * @param {('male'|'female')} gender
  */
-export const getUsersByFavoriteFruit = (users, favoriteFruit, gender) => {
-
-};
+export const getUsersByFavoriteFruit = (users, favoriteFruit, gender) => {};
 
 /**
  * filter the users by unread messages (you can find them in the `greeting` property value)
  * @param {import('../types/user.type').User[]} users
  */
-export const getUsersWithUnreadMessages = (users) => {
+export const getUsersWithUnreadMessages = (users) => {};
 
-}
+/**
+ * Filter the list of inventors for those who were born in the 1500's
+ *
+ * @param {import('../types/inventor.type').Inventor[]} inventors
+ */
 
+export const getInventorsBornIn1500 = (inventors) => {
+
+};

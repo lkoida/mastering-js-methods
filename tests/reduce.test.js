@@ -6,10 +6,11 @@ import {
   findBiggestTagHolder,
   findTheLongestDescription,
   findTheMostLonelyUser,
+  totalYearsOfLive,
 } from "../exercises/reduce.js";
-import {users} from "../data/source-data.js";
+import {famousInventors, users} from "../data/source-data.js";
 
-describe('reduce', () => {
+describe('reduce', {only: true}, () => {
     it('should return biggest tags holder', () => {
         const holder = findBiggestTagHolder(users)
 
@@ -60,5 +61,11 @@ describe('reduce', () => {
         ]
         const names = aggregateByNameAndAge(users)
         assert.deepEqual(names, expected)
+    });
+
+    it.only('should return total years of live of all inventros', () => {
+        const total = totalYearsOfLive(famousInventors);
+
+        assert.strictEqual(total, 861)
     });
 })
