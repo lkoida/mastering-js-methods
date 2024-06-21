@@ -7,11 +7,7 @@
  * @param {import('../types/user.type').User[]} users
  * @param {('blue'|'brown'|'green')} color
  */
-export const getByEyesColor = (users, color) => {
-  if (!["blue", "brown", "green"].includes(color)) {
-    throw new Error("this eye color is not exist");
-  }
-};
+export const getByEyesColor = (users, color) => {};
 
 /**
  * filter the users by gender
