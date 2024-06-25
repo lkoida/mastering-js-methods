@@ -1,6 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
 import { users, famousInventors } from "../data/source-data.js";
+import { citiesList } from "../data/cities-list.js";
 import {
   sortedByRegDateAsc,
   sortedByRegDateDesc,
@@ -8,6 +9,8 @@ import {
   sortedByTagsDesc,
   sortedByBalanceDesc,
   sortedInventorsOldestYoungest,
+  sortCities,
+  sortCitiesByPopulation,
 } from "../exercises/sort.js";
 
 describe("sort", () => {
@@ -59,7 +62,7 @@ describe("sort", () => {
     assert.deepStrictEqual(sortedUsers, expected.toReversed());
   });
 
-  it('should sort inventors form oldest to yougest', () => {
+  it("should sort inventors form oldest to yougest", () => {
     const expected = [
       { first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1543 },
       { first: "Galileo", last: "Galilei", year: 1564, passed: 1642 },
@@ -76,6 +79,27 @@ describe("sort", () => {
     ];
     const sortedInventors = sortedInventorsOldestYoungest(famousInventors);
 
-    assert.deepStrictEqual(expected, sortedInventors)
+    assert.deepStrictEqual(expected, sortedInventors);
+  });
+
+  it("should sort cities ASC/DESC", () => {
+    const resAsc = sortCities(citiesList, "ASC");
+    const resDesc = sortCities(citiesList, "DESC");
+
+    assert.ok(
+      resAsc[0] === "Aberdeen - 63730168" &&
+        resAsc[resAsc.length - 1] === "Wyoming - 52531432"
+    );
+    assert.ok(
+      resDesc[0] === "Wyoming - 52531432" &&
+        resDesc[resDesc.length - 1] === "Aberdeen - 63730168"
+    );
+  });
+
+  it("should sort cities by population ASC", () => {
+    const result = sortCitiesByPopulation(citiesList);
+
+    assert.equal(result[0], "Springhill - 125862");
+    assert.equal(result[result.length - 1], "Fidelis - 89805567");
   });
 });

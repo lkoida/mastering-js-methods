@@ -1,7 +1,7 @@
 /**
  * Methods which could be used in that section
  * - toSorted() main method to sort data
- * - Date.parce() - to convert string to numeric view ov the day
+ * - Date.parce() - to convert string to numeric view of the day
  * - replace() - to fix the spaces in string representation of the date
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted
@@ -48,8 +48,21 @@ export const sortedByBalanceDesc = (users) => {};
  * Sort the inventors by birthdate, oldest to youngest
  * @param {import('../types/inventor.type').Inventor} inventors
  */
-export const sortedInventorsOldestYoungest = (inventors) => {
-    
-};
+export const sortedInventorsOldestYoungest = (inventors) => {};
 
+/**
+ * sort cities asc/desc depending on the argument provided in the function params
+ * By default, if no sort direction specified it should sort in ASC order
+ *
+ * @param {import('../types/cities-list.type').CitiesList} citiesList
+ * @param {("ASC" | "DESC")} [dir=ASC]
+ */
+export const sortCities = (citiesList, dir = "ASC") => {};
 
+/**
+ *
+ * @param {import('../types/cities-list.type').CitiesList} citiesList
+ *
+ * @returns {String[]}
+ */
+export const sortCitiesByPopulation = (citiesList) => {};

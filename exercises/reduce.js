@@ -7,27 +7,21 @@
  * @param {import('../types/user.type').User[]} users
  * @returns {*}
  */
-export const findBiggestTagHolder = (users) => {
-
-}
+export const findBiggestTagHolder = (users) => {};
 
 /**
  * find the user who have the fewest number of friends
  * @param {import('../types/user.type').User[]} users
  * @returns {*}
  */
-export const findTheMostLonelyUser = (users) => {
-
-}
+export const findTheMostLonelyUser = (users) => {};
 
 /**
  * find user who have the longest description
  * @param {import('../types/user.type').User[]} users
  * @returns {*}
  */
-export const findTheLongestDescription = (users) => {
-
-}
+export const findTheLongestDescription = (users) => {};
 
 /**
  * Extract users names into array of full names
@@ -35,9 +29,7 @@ export const findTheLongestDescription = (users) => {
  * [ 'firstName surname', ... ]
  * @param {Array.<Object>} users
  */
-export const aggregateByName = (users) => {
-
-}
+export const aggregateByName = (users) => {};
 
 /**
  * Extract users names, surname and age into collection
@@ -49,14 +41,16 @@ export const aggregateByName = (users) => {
  * ]
  * @param {Array.<Object>} users
  */
-export const aggregateByNameAndAge = (users) => {
-
-}
+export const aggregateByNameAndAge = (users) => {};
 
 /**
  * How many years did all the inventors live all together?
  * @param {import('../types/inventor.type').Inventor[]} inventors
  */
-export const totalYearsOfLive = (inventors) => {
-  
-}
+export const totalYearsOfLive = (inventors) => {};
+
+/**
+ * return total population of all cities
+ * @param {import('../types/cities-list.type').CitiesList} citiesList
+ */
+export const countTotalPopulation = (citiesList) => {};
