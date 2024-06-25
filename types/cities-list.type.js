@@ -1,6 +1,6 @@
 /**
  * @typedef CitiesList
- * @type {Array<String>}
+ * @type {String[]}
  */
 
 export {};

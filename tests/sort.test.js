@@ -26,7 +26,7 @@ describe("sort", () => {
     "2020-05-06T10:00:19 -03:00",
     "2023-11-22T08:56:36 -02:00",
   ];
-  it("should sort users by date asc", () => {
+  it("sortedByRegDateAsc", () => {
     const sortedUsers = sortedByRegDateAsc(users).map(
       (user) => user.registered
     );
@@ -34,7 +34,7 @@ describe("sort", () => {
     assert.deepStrictEqual(sortedUsers, expected);
   });
 
-  it("should sort users by registeration date desc", () => {
+  it("sortedByRegDateDesc", () => {
     const sortedUsers = sortedByRegDateDesc(users).map(
       (user) => user.registered
     );
@@ -42,19 +42,19 @@ describe("sort", () => {
     assert.deepStrictEqual(sortedUsers, expected.toReversed());
   });
 
-  it("should sort users by tags amount asc", { skip: true }, () => {
+  it("sortedByTagsAsc", () => {
     const sortedUsers = sortedByTagsAsc(users).map((user) => user.tags.length);
 
     assert.deepStrictEqual(sortedUsers, expected.toReversed());
   });
 
-  it("should sort users by tags amount desc", { skip: true }, () => {
+  it("sortedByTagsDesc", () => {
     const sortedUsers = sortedByTagsDesc(users).map((user) => user.registered);
 
     assert.deepStrictEqual(sortedUsers, expected.toReversed());
   });
 
-  it("should sort users by balance desc", { skip: true }, () => {
+  it("sortedByBalanceDesc", () => {
     const sortedUsers = sortedByBalanceDesc(users).map(
       (user) => user.registered
     );
@@ -62,7 +62,7 @@ describe("sort", () => {
     assert.deepStrictEqual(sortedUsers, expected.toReversed());
   });
 
-  it("should sort inventors form oldest to yougest", () => {
+  it("sortedInventorsOldestYoungest", () => {
     const expected = [
       { first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1543 },
       { first: "Galileo", last: "Galilei", year: 1564, passed: 1642 },
@@ -82,7 +82,7 @@ describe("sort", () => {
     assert.deepStrictEqual(expected, sortedInventors);
   });
 
-  it("should sort cities ASC/DESC", () => {
+  it("sortCities", () => {
     const resAsc = sortCities(citiesList, "ASC");
     const resDesc = sortCities(citiesList, "DESC");
 
@@ -96,7 +96,7 @@ describe("sort", () => {
     );
   });
 
-  it("should sort cities by population ASC", () => {
+  it("sortCitiesByPopulation", () => {
     const result = sortCitiesByPopulation(citiesList);
 
     assert.equal(result[0], "Springhill - 125862");

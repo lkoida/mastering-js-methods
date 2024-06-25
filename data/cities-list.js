@@ -1,3 +1,6 @@
+/**
+ * @type {import('../types/cities-list.type').CitiesList}
+ */
 export const citiesList = [
   "Lisco - 49863284",
   "Nipinnawasee - 7215491",
