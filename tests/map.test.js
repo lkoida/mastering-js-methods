@@ -5,7 +5,7 @@ import {
   mapBalance,
   mapTagsAndFriends,
   getFirstlastNameOfInventors,
-} from "../exercises/map.js";
+} from "../exercises/array-collection/map.js";
 
 describe("map", () => {
   let mockUsers;

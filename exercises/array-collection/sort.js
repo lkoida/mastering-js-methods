@@ -12,41 +12,41 @@
 
 /**
  * sort users by registration date ascending
- * @param {import('../types/user.type').User[]} users
+ * @param {import('../../types/user.type').User[]} users
  */
 export const sortedByRegDateAsc = (users) => {};
 
 /**
  * sort users by registration date descending
- * @param {import('../types/user.type').User[]} users
+ * @param {import('../../types/user.type').User[]} users
  */
 export const sortedByRegDateDesc = (users) => {};
 
 /**
  * sort users by tags amount ascending
  *
- * @param {import('../types/user.type').User[]} users
+ * @param {import('../../types/user.type').User[]} users
  */
 export const sortedByTagsAsc = (users) => {};
 
 /**
  * sort users by tags amount descending
  *
- * @param {import('../types/user.type').User[]} users
+ * @param {import('../../types/user.type').User[]} users
  */
 export const sortedByTagsDesc = (users) => {};
 
 /**
  * sort user by balance
  *
- * @param {import('../types/user.type').User[]} users
+ * @param {import('../../types/user.type').User[]} users
  */
 
 export const sortedByBalanceDesc = (users) => {};
 
 /**
  * Sort the inventors by birthdate, oldest to youngest
- * @param {import('../types/inventor.type').Inventor} inventors
+ * @param {import('../../types/inventor.type').Inventor} inventors
  */
 export const sortedInventorsOldestYoungest = (inventors) => {};
 
@@ -54,14 +54,14 @@ export const sortedInventorsOldestYoungest = (inventors) => {};
  * sort cities asc/desc depending on the argument provided in the function params
  * By default, if no sort direction specified it should sort in ASC order
  *
- * @param {import('../types/cities-list.type').CitiesList} citiesList
+ * @param {import('../../types/cities-list.type').CitiesList} citiesList
  * @param {("ASC" | "DESC")} [dir=ASC]
  */
 export const sortCities = (citiesList, dir = "ASC") => {};
 
 /**
  *
- * @param {import('../types/cities-list.type').CitiesList} citiesList
+ * @param {import('../../types/cities-list.type').CitiesList} citiesList
  *
  * @returns {String[]}
  */

@@ -7,7 +7,7 @@ import {
   getUsersByGender,
   getUsersWithUnreadMessages,
   getInventorsBornIn1500,
-} from "../exercises/filter.js";
+} from "../exercises/array-collection/filter.js";
 
 describe("filter", () => {
   describe("getByEyesColor", () => {

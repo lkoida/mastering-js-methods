@@ -8,7 +8,7 @@ import {
   findTheMostLonelyUser,
   totalYearsOfLive,
   countTotalPopulation,
-} from "../exercises/reduce.js";
+} from "../exercises/aarray-collection/reduce.js";
 import { famousInventors, users } from "../data/source-data.js";
 import { citiesList } from "../data/cities-list.js";
 

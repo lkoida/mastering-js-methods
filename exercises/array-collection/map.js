@@ -10,7 +10,7 @@
  *     ... rest of the fields
  * }
  *
- * @param {import('../types/user.type').User[]} users
+ * @param {import('../../types/user.type').User[]} users
  */
 export const mapBalance = (users) => {};
 
@@ -29,13 +29,13 @@ export const mapBalance = (users) => {};
  *     ... rest of the properties
  * }
  *
- * @param {import('../types/user.type').User[]} users
+ * @param {import('../../types/user.type').User[]} users
  */
 export const mapTagsAndFriends = (users) => {};
 
 /**
  *  Give us an array of the inventors first and last names
  *
- * @param {import('../types/inventor.type').Inventor[]} inventors
+ * @param {import('../../types/inventor.type').Inventor[]} inventors
  */
 export const getFirstlastNameOfInventors = (inventors) => {};

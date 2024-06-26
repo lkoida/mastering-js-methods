@@ -11,7 +11,7 @@ import {
   sortedInventorsOldestYoungest,
   sortCities,
   sortCitiesByPopulation,
-} from "../exercises/sort.js";
+} from "../exercises/array-collection/sort.js";
 
 describe("sort", () => {
   const expected = [
