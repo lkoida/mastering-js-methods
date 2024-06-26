@@ -13,24 +13,24 @@ import { famousInventors, users } from "../data/source-data.js";
 import { citiesList } from "../data/cities-list.js";
 
 describe("reduce", () => {
-  it("should return biggest tags holder", () => {
+  it("findBiggestTagHolder", () => {
     const holder = findBiggestTagHolder(users);
 
     assert.strictEqual(holder.tags.length, 12);
   });
 
-  it("should return the most lonely person", () => {
+  it("findTheMostLonelyUser", () => {
     const person = findTheMostLonelyUser(users);
     assert.strictEqual(person.friends.length, 4);
   });
 
-  it("should return the most lonely person", () => {
+  it("findTheLongestDescription", () => {
     const person = findTheLongestDescription(users);
     assert.strictEqual(person._id, "6609132533c5a8fd7bfa7be6");
     assert.strictEqual(person.about.length, 185);
   });
 
-  it("should return array of users names and surnames", () => {
+  it("aggregateByName", () => {
     const expected = [
       "Mendoza Trujillo",
       "Barnett Odonnell",
@@ -47,7 +47,7 @@ describe("reduce", () => {
     assert.deepEqual(names, expected);
   });
 
-  it("should return array of users names, surnames and age as array of objects", () => {
+  it("aggregateByNameAndAge", () => {
     const expected = [
       { "Mendoza Trujillo": 32 },
       { "Barnett Odonnell": 49 },
@@ -64,13 +64,13 @@ describe("reduce", () => {
     assert.deepEqual(names, expected);
   });
 
-  it("should return total years of live of all inventros", () => {
+  it("totalYearsOfLive", () => {
     const total = totalYearsOfLive(famousInventors);
 
     assert.strictEqual(total, 861);
   });
 
-  it("should return total number of population", () => {
+  it("countTotalPopulation", () => {
     const total = countTotalPopulation(citiesList);
     assert.equal(total, 4242579017);
   });
