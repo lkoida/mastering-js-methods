@@ -38,9 +38,4 @@ export const mapTagsAndFriends = (users) => {};
  *
  * @param {import('../types/inventor.type').Inventor[]} inventors
  */
-export const getFirstlastNameOfInventors = (inventors) => {
-  return inventors.map((inventor) => {
-    return `${inventor.first} ${inventor.last}`;
-  });
-};
-
+export const getFirstlastNameOfInventors = (inventors) => {};

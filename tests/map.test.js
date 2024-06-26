@@ -12,7 +12,7 @@ describe("map", () => {
   beforeEach(() => {
     mockUsers = JSON.parse(JSON.stringify(users));
   });
-  it("should return collection of users with mapped balance", () => {
+  it("mapBalance", () => {
     const mappedUsersBalance = mapBalance(mockUsers);
 
     mappedUsersBalance.forEach((user) => {
@@ -21,7 +21,7 @@ describe("map", () => {
     });
   });
 
-  it("should return total number of tags and friends for each user", () => {
+  it("mapTagsAndFriends", () => {
     const mappedTagsAndFriends = mapTagsAndFriends(mockUsers);
     mappedTagsAndFriends.forEach((user, index) => {
       assert.strictEqual(typeof user.tags, "number");
@@ -32,7 +32,7 @@ describe("map", () => {
     });
   });
 
-  it("should return array of the inventors first and last name", () => {
+  it("getFirstlastNameOfInventors", () => {
     const expected = [
       "Isaac Newton",
       "Marie Curie",
