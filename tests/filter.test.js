@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
-import { users, famousInventors } from "../data/source-data.js";
+import { users, famousInventors } from "../data/index.js";
 import {
   getByEyesColor,
   getUsersByFavoriteFruit,

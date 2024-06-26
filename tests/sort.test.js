@@ -1,7 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
-import { users, famousInventors } from "../data/source-data.js";
-import { citiesList } from "../data/cities-list.js";
+import { citiesList, users, famousInventors } from "../data/index.js";
 import {
   sortedByRegDateAsc,
   sortedByRegDateDesc,

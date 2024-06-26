@@ -1,7 +1,10 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
-import { findActive, findByUserFriendName } from "../exercises/array-collection/find.js";
-import { users } from "../data/source-data.js";
+import {
+  findActive,
+  findByUserFriendName,
+} from "../exercises/array-collection/find.js";
+import { users } from "../data/index.js";
 
 describe("find", () => {
   it("findActive", () => {

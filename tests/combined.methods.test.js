@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
-import { citiesList } from "../data/cities-list.js";
+import { citiesList } from "../data/index.js";
 import {
   countTotalPopulationGroupedByAlphabet,
   createAlphabeticalCollection,
@@ -78,7 +78,7 @@ describe("Combined methods", () => {
       const trimmed = right.trim();
 
       const population = parseInt(trimmed);
-      
+
       assert.ok(population > 12500000);
     });
   });

@@ -9,8 +9,7 @@ import {
   totalYearsOfLive,
   countTotalPopulation,
 } from "../exercises/array-collection/reduce.js";
-import { famousInventors, users } from "../data/source-data.js";
-import { citiesList } from "../data/cities-list.js";
+import { famousInventors, users, citiesList } from "../data/index.js";
 
 describe("reduce", () => {
   it("findBiggestTagHolder", () => {

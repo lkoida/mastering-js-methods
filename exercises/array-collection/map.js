@@ -39,3 +39,11 @@ export const mapTagsAndFriends = (users) => {};
  * @param {import('../../types/inventor.type').Inventor[]} inventors
  */
 export const getFirstlastNameOfInventors = (inventors) => {};
+
+/**
+ * Return an array of people with  flipped first and last name
+ *
+ * @param {String[]} people
+ */
+
+export const peopleFlippedFirstLastName = (people) => {};

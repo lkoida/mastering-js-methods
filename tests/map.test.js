@@ -1,10 +1,11 @@
 import { describe, it, beforeEach } from "node:test";
 import assert from "node:assert";
-import { users, famousInventors } from "../data/source-data.js";
+import { users, famousInventors, people } from "../data/index.js";
 import {
   mapBalance,
   mapTagsAndFriends,
   getFirstlastNameOfInventors,
+  peopleFlippedFirstLastName,
 } from "../exercises/array-collection/map.js";
 
 describe("map", () => {
@@ -50,5 +51,54 @@ describe("map", () => {
     const inventorsNames = getFirstlastNameOfInventors(famousInventors);
 
     assert.deepStrictEqual(expected, inventorsNames);
+  });
+
+  it("peopleFlippedFirstLastName", () => {
+    const expected = [
+      "Sandra, Bernhard",
+      "Erin, Bethea",
+      "Carl, Becker",
+      "Lloyd, Bentsen",
+      "Samuel, Beckett",
+      "William, Blake",
+      "Ric, Berger",
+      "Mick, Beddoes",
+      "Ludwig, Beethoven",
+      "Hilaire, Belloc",
+      "Menachem, Begin",
+      "Saul, Bellow",
+      "Robert, Benchley",
+      "Robert, Blair",
+      "Peter, Benenson",
+      "Walter, Benjamin",
+      "Irving, Berlin",
+      "Tony, Benn",
+      "Leana, Benson",
+      "Silas, Bent",
+      "Milton, Berle",
+      "Halle, Berry",
+      "Steve, Biko",
+      "Glenn, Beck",
+      "Ingmar, Bergman",
+      "Elk, Black",
+      "Luciano, Berio",
+      "Eric, Berne",
+      "Yogi, Berra",
+      "Wendell, Berry",
+      "Aneurin, Bevan",
+      "David, Ben-Gurion",
+      "Ken, Bevel",
+      "Joseph, Biden",
+      "Chester, Bennington",
+      "Ambrose, Bierce",
+      "Josh, Billings",
+      "Augustine, Birrell",
+      "Tony, Blair",
+      "Henry, Beecher",
+      "Frank, Biondo",
+    ];
+    const actual = peopleFlippedFirstLastName(people);
+
+    assert.deepStrictEqual(expected, actual);
   });
 });

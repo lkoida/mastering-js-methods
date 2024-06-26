@@ -13,15 +13,7 @@
 export const getCitiesWithPopulationMoreThenCriteria = (
   citiesList,
   minPopulation = 12500000
-) => {
-  return citiesList.filter((city) => {
-    const [, population] = city.split("-");
-    const trimmedPopulation = population.trim();
-    const castedToNumber = parseInt(trimmedPopulation);
-
-    return castedToNumber > minPopulation;
-  });
-};
+) => {};
 
 /**
  * count population in cities grouped alphabetically by first letter
