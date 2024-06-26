@@ -6,7 +6,7 @@
  * parseInt() - to cast string value to number
  * charAt() - to get the letter/character from the provided position
  *
- * @param {import('../types/cities-list.type').CitiesList} citiesList
+ * @param {import('../../types/cities-list.type').CitiesList} citiesList
  *
  * @returns {{[String]: Number}}
  */
@@ -32,6 +32,6 @@ export const countTotalPopulationGroupedByAlphabet = (citiesList) => {};
  * includes() to check if value exists in array
  * push() to push new value in array
  *
- * @param {import('../types/cities-list.type').CitiesList} citiesList
+ * @param {import('../../types/cities-list.type').CitiesList} citiesList
  */
 export const createAlphabeticalCollection = (citiesList) => {};

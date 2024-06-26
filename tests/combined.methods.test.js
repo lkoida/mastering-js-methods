@@ -4,7 +4,7 @@ import { citiesList } from "../data/cities-list.js";
 import {
   countTotalPopulationGroupedByAlphabet,
   createAlphabeticalCollection,
-} from "../exercises/combined.methods.js";
+} from "../exercises/array-collection/combined.methods.js";
 
 describe("Combined methods", () => {
   it("countTotalPopulationGroupedByAlphabet", () => {
