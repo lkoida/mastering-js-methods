@@ -4,6 +4,7 @@ import { citiesList } from "../data/cities-list.js";
 import {
   countTotalPopulationGroupedByAlphabet,
   createAlphabeticalCollection,
+  getCitiesWithPopulationMoreThenCriteria,
 } from "../exercises/array-collection/combined.methods.js";
 
 describe("Combined methods", () => {
@@ -66,6 +67,19 @@ describe("Combined methods", () => {
     expectedKeys.forEach((key) => {
       const cities = collection[key];
       assert.ok(cities.every((city) => city.startsWith(key)));
+    });
+  });
+
+  it("getCitiesWithPopulationMoreThenCriteria", () => {
+    const actual = getCitiesWithPopulationMoreThenCriteria(citiesList);
+
+    actual.forEach((city) => {
+      const [, right] = city.split("-");
+      const trimmed = right.trim();
+
+      const population = parseInt(trimmed);
+      
+      assert.ok(population > 12500000);
     });
   });
 });

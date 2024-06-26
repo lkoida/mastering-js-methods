@@ -1,4 +1,29 @@
 /**
+ * Filter cities which have popuation more then minPopulation param
+ *
+ * methods to be used:
+ * split() - to split string as array
+ * trim() - to remove the forward and trailing spaces from the string
+ * parseInt() - to convert the string reprsentation of the number to number type
+ *
+ * @param {import('../../types/cities-list.type').CitiesList} citiesList
+ * @param {Number} [minPopulation=125000]
+ */
+
+export const getCitiesWithPopulationMoreThenCriteria = (
+  citiesList,
+  minPopulation = 12500000
+) => {
+  return citiesList.filter((city) => {
+    const [, population] = city.split("-");
+    const trimmedPopulation = population.trim();
+    const castedToNumber = parseInt(trimmedPopulation);
+
+    return castedToNumber > minPopulation;
+  });
+};
+
+/**
  * count population in cities grouped alphabetically by first letter
  * methods which could be helpfull
  * split() - create array form string dividing it by provided argument
