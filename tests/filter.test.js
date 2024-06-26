@@ -21,11 +21,8 @@ describe("filter", () => {
       });
     });
 
-    it("should throw an error if the color parameter is not in valid colors list", () => {
-      assert.throws(
-        () => getByEyesColor(users, "orange"),
-        "/this eye color is not exist$/"
-      );
+    it("should return an empty array when no users found with provided eye color", () => {
+      assert.deepEqual([], getByEyesColor(users, "orange"));
     });
   });
 
