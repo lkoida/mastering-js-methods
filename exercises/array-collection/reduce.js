@@ -4,21 +4,21 @@
 
 /**
  * find user who have the biggest amount of tags
- * @param {import('../../types/user.type').User[]} users
+ * @param {import('../../data/users').users} users
  * @returns {*}
  */
 export const findBiggestTagHolder = (users) => {};
 
 /**
  * find the user who have the fewest number of friends
- * @param {import('../../types/user.type').User[]} users
+ * @param {import('../../data/users').users} users
  * @returns {*}
  */
 export const findTheMostLonelyUser = (users) => {};
 
 /**
  * find user who have the longest description
- * @param {import('../../types/user.type').User[]} users
+ * @param {import('../../data/users').users} users
  * @returns {*}
  */
 export const findTheLongestDescription = (users) => {};
@@ -27,7 +27,7 @@ export const findTheLongestDescription = (users) => {};
  * Extract users names into array of full names
  * write response in the array with the given structure
  * [ 'firstName surname', ... ]
- * @param {Array.<Object>} users
+ * @param {import('../../data/users').users} users
  */
 export const aggregateByName = (users) => {};
 
@@ -39,18 +39,18 @@ export const aggregateByName = (users) => {};
  * [
  *  {"firstName surname": age }
  * ]
- * @param {Array.<Object>} users
+ * @param {import('../../data/users').users} users
  */
 export const aggregateByNameAndAge = (users) => {};
 
 /**
  * How many years did all the inventors live all together?
- * @param {import('../../types/inventor.type').Inventor[]} inventors
+ * @param {import('../../data/famous-inventors').famousInventors} inventors
  */
 export const totalYearsOfLive = (inventors) => {};
 
 /**
  * return total population of all cities
- * @param {import('../../types/cities-list.type').CitiesList} citiesList
+ * @param {import('../../data/cities-list').citiesList} citiesList
  */
 export const countTotalPopulation = (citiesList) => {};

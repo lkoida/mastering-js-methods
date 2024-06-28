@@ -1,12 +1,12 @@
 /**
- * Filter cities which have popuation more then minPopulation param
+ * Filter cities which have population more than minPopulation param
  *
  * methods to be used:
  * split() - to split string as array
  * trim() - to remove the forward and trailing spaces from the string
- * parseInt() - to convert the string reprsentation of the number to number type
+ * parseInt() - to convert the string representation of the number to number type
  *
- * @param {import('../../types/cities-list.type').CitiesList} citiesList
+ * @param {import('../../data/cities-list').citiesList} citiesList
  * @param {Number} [minPopulation=125000]
  */
 
@@ -17,13 +17,13 @@ export const getCitiesWithPopulationMoreThenCriteria = (
 
 /**
  * count population in cities grouped alphabetically by first letter
- * methods which could be helpfull
+ * methods which could be helpful
  * split() - create array form string dividing it by provided argument
- * trim() - to remove useles spaces form start and end of the string
+ * trim() - to remove useless spaces form start and end of the string
  * parseInt() - to cast string value to number
  * charAt() - to get the letter/character from the provided position
  *
- * @param {import('../../types/cities-list.type').CitiesList} citiesList
+ * @param {import('../../data/cities-list').citiesList} citiesList
  *
  * @returns {{[String]: Number}}
  */
@@ -42,13 +42,13 @@ export const countTotalPopulationGroupedByAlphabet = (citiesList) => {};
  *
  * toSorted() - to sort first the array from A-Z
  *
- * reduse() - to aggregate the result
+ * reduce() - to aggregate the result
  * charAt() - to get the character/letter from the provided position
  *
  * operator `in` to check if the key exists in object
  * includes() to check if value exists in array
  * push() to push new value in array
  *
- * @param {import('../../types/cities-list.type').CitiesList} citiesList
+ * @param {import('../../data/cities-list').citiesList} citiesList
  */
 export const createAlphabeticalCollection = (citiesList) => {};

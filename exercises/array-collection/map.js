@@ -10,7 +10,7 @@
  *     ... rest of the fields
  * }
  *
- * @param {import('../../types/user.type').User[]} users
+ * @param {import('../../data/users').users} users
  */
 export const mapBalance = (users) => {};
 
@@ -29,21 +29,21 @@ export const mapBalance = (users) => {};
  *     ... rest of the properties
  * }
  *
- * @param {import('../../types/user.type').User[]} users
+ * @param {import('../../data/users').users} users
  */
 export const mapTagsAndFriends = (users) => {};
 
 /**
  *  Give us an array of the inventors first and last names
  *
- * @param {import('../../types/inventor.type').Inventor[]} inventors
+ * @param {import('../../data/famous-inventors').famousInventors} inventors
  */
 export const getFirstlastNameOfInventors = (inventors) => {};
 
 /**
  * Return an array of people with  flipped first and last name
  *
- * @param {String[]} people
+ * @param {import('../../data/people').people} people
  */
 
 export const peopleFlippedFirstLastName = (people) => {};
