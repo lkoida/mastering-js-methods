@@ -1,3 +1,7 @@
+/**
+ *
+ * @type {{last: string, year: number, passed: number, first: string}[]}
+ */
 export const famousInventors = [
   { first: "Isaac", last: "Newton", year: 1643, passed: 1727 },
   { first: "Marie", last: "Curie", year: 1867, passed: 1934 },

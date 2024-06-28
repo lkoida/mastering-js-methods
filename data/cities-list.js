@@ -1,5 +1,6 @@
 /**
- * @type {import('../types/cities-list.type').CitiesList}
+ *
+ * @type {string[]}
  */
 export const citiesList = [
   "Lisco - 49863284",

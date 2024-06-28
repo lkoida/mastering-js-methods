@@ -1,3 +1,7 @@
+/**
+ * @description List of people's lastname and first name separated by coma
+ * @type {string[]} lastname, firstname
+ */
 export const people = [
   "Bernhard, Sandra",
   "Bethea, Erin",
