@@ -1,6 +1,6 @@
 import {describe, it, beforeEach} from "node:test";
 import assert from "node:assert";
-import {users, famousInventors, people} from "../data/index.js";
+import {users, famousInventors, people} from "../../data/index.js";
 import {
     mapBalance,
     mapTagsAndFriends,
@@ -25,7 +25,7 @@ import {
     getArrayOfTheFullNamesAndInitials,
     getArrayOfLastNameUpperAndFirstNameLower,
     getArrayOfNamesWithTheFirstNameInRoundBrackets,
-} from "../exercises/array-collection/map.js";
+} from "../../exercises/array-collection/map.js";
 
 describe("map", () => {
 

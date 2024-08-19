@@ -8,8 +8,8 @@ import {
   findTheMostLonelyUser,
   totalYearsOfLive,
   countTotalPopulation,
-} from "../exercises/array-collection/reduce.js";
-import { famousInventors, users, citiesList } from "../data/index.js";
+} from "../../exercises/array-collection/reduce.js";
+import { famousInventors, users, citiesList } from "../../data/index.js";
 
 describe("reduce", () => {
   it("findBiggestTagHolder", () => {

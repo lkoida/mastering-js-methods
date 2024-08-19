@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
-import { citiesList, users, famousInventors } from "../data/index.js";
+import { citiesList, users, famousInventors } from "../../data/index.js";
 import {
   sortedByRegDateAsc,
   sortedByRegDateDesc,
@@ -10,7 +10,7 @@ import {
   sortedInventorsOldestYoungest,
   sortCities,
   sortCitiesByPopulation,
-} from "../exercises/array-collection/sort.js";
+} from "../../exercises/array-collection/sort.js";
 
 describe("sort", () => {
   const expected = [

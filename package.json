@@ -5,8 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node --test",
-    "test:exact": "npm run test -- --test-name-pattern='getCitiesWithPopulationMoreThenCriteria'"
+    "test:all": "node --test",
+    "test:filter": "node --test 'tests/array-collection/filter.test.js'",
+    "test:find": "node --test 'tests/array-collection/find.test.js'",
+    "test:map": "node --test 'tests/array-collection/map.test.js'",
+    "test:reduce": "node --test 'tests/array-collection/reduce.test.js'",
+    "test:sort": "node --test 'tests/array-collection/sort.test.js'",
+    "test:combined": "node --test 'tests/array-collection/combined.methods.test.js'",
+    "test:strings_1": "node --test 'tests/strings/strings_ex_1.test.js'",
+    "test:strings_2": "node --test --watch 'tests/strings/strings_ex_2.test.js'"
   },
   "author": "leonidkoida@gmail.com",
   "license": "MIT"

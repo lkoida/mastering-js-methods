@@ -1,11 +1,11 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
-import { citiesList } from "../data/index.js";
+import { citiesList } from "../../data/index.js";
 import {
   countTotalPopulationGroupedByAlphabet,
   createAlphabeticalCollection,
   getCitiesWithPopulationMoreThenCriteria,
-} from "../exercises/array-collection/combined.methods.js";
+} from "../../exercises/array-collection/combined.methods.js";
 
 describe("Combined methods", () => {
   it("countTotalPopulationGroupedByAlphabet", () => {

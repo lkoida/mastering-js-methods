@@ -8,8 +8,8 @@ import {
     findPersonByLastNameEndsWith,
     findPersonByLastNameStartsWith,
     findPersonLastNameContains,
-} from "../exercises/array-collection/find.js";
-import {users, people} from "../data/index.js";
+} from "../../exercises/array-collection/find.js";
+import {users, people} from "../../data/index.js";
 
 describe("find", () => {
     it("findPersonByLastName", () => {

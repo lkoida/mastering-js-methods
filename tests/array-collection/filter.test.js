@@ -1,13 +1,13 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
-import { users, famousInventors } from "../data/index.js";
+import { users, famousInventors } from "../../data/index.js";
 import {
   getByEyesColor,
   getUsersByFavoriteFruit,
   getUsersByGender,
   getUsersWithUnreadMessages,
   getInventorsBornIn1500,
-} from "../exercises/array-collection/filter.js";
+} from "../../exercises/array-collection/filter.js";
 
 describe("filter", () => {
   describe("getByEyesColor", () => {
