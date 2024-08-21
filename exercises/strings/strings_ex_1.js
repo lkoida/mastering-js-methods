@@ -5,7 +5,6 @@
  * @returns {string}
  */
 export const convertStringToUpperCase = (input) => {
-  return input.toUpperCase();
 };
 
 /**
@@ -14,14 +13,13 @@ export const convertStringToUpperCase = (input) => {
  * @return {string}
  */
 export const convertStringToLowerCase = (input) => {
-  return input.toLowerCase();
 };
 
 /**
  * @param {string} inputString
  * @param {number} position
  */
-export const getletterFromPosition = (inputString, position) => {
+export const getLetterFromPosition = (inputString, position) => {
   return inputString.charAt(position);
 };
 

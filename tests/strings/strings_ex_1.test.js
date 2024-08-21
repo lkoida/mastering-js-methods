@@ -6,7 +6,7 @@ import {
   checkOnPalindrome,
   convertStringToUpperCase,
   convertStringToLowerCase,
-  getletterFromPosition,
+  getLetterFromPosition,
 } from "../../exercises/strings/strings_ex_1.js";
 
 describe("strings_1", () => {
@@ -27,7 +27,7 @@ describe("strings_1", () => {
     ];
 
     for (const { string, charAt, expected } of assertions) {
-      assert.strictEqual(getletterFromPosition(string, charAt), expected);
+      assert.strictEqual(getLetterFromPosition(string, charAt), expected);
     }
   });
 

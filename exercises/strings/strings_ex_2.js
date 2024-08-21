@@ -6,7 +6,6 @@
  * @returns {boolean}
  */
 export const isEmptyString = (inputString) => {
-  return inputString.length === 0 && typeof inputString === "string";
 };
 
 /**
@@ -18,7 +17,6 @@ export const isEmptyString = (inputString) => {
  * @returns {string}
  */
 export const truncate = (input, length) => {
-  return `${input.substring(0, length).trim()}...`;
 };
 
 /**
@@ -29,7 +27,6 @@ export const truncate = (input, length) => {
  * @return {string}
  */
 export const fillString = (inputString) => {
-  return inputString.padStart(10, "0");
 };
 
 /**
@@ -40,11 +37,6 @@ export const fillString = (inputString) => {
  * @returns {string}
  */
 export const pascalize = (inputString) => {
-  //TODO think about special characters
-  return inputString
-    .split(" ")
-    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
-    .join("");
 };
 
 /**
@@ -55,19 +47,6 @@ export const pascalize = (inputString) => {
  * @returns {string}
  */
 export const camelize = (inputString) => {
-  const strings = inputString.split(" ");
-
-  for (let i = 0; i < strings.length; i++) {
-    if (i === 0) {
-      strings[i] = strings[i].toLowerCase();
-      continue;
-    }
-
-    strings[i] =
-      strings[i][0].toUpperCase() + strings[i].slice(1).toLowerCase();
-  }
-
-  return strings.join("");
 };
 
 /**
@@ -78,12 +57,6 @@ export const camelize = (inputString) => {
  * @returns {string}
  */
 export const snakeCased = (inputString) => {
-  return inputString
-    .split(" ")
-    .map((word) => {
-      return word.toLowerCase();
-    })
-    .join("_");
 };
 
 /**
@@ -94,12 +67,6 @@ export const snakeCased = (inputString) => {
  * @returns {string}
  */
 export const kebabCased = (inputString) => {
-  return inputString
-    .split(" ")
-    .map((word) => {
-      return word.toLowerCase();
-    })
-    .join("-");
 };
 
 /**
@@ -112,47 +79,6 @@ export const kebabCased = (inputString) => {
  * @return {string}
  */
 export const stringConverter = (inputString, convertTo) => {
-  if (!convertTo)
-    throw new Error(
-      "you should specify to what type of string you want to convert"
-    );
-
-  let result = inputString
-    .replaceAll(/[^A-Za-z0-9\s]/g, "")
-    .toLowerCase()
-    .split(" ");
-
-  switch (convertTo) {
-    case "pascal":
-      result = result
-        .map((word) => {
-          const firstLetter = word.charAt(0).toUpperCase();
-          const rest = word.slice(1).toLowerCase();
-          return `${firstLetter}${rest}`;
-        })
-        .join("");
-      break;
-    case "camel":
-      for (let i = 0; i < result.length; i++) {
-        if (i === 0) continue;
-        result[i] =
-          result[i].charAt(0).toUpperCase() + result[i].slice(1).toLowerCase();
-      }
-
-      result = result.join("");
-
-      break;
-    case "kebab":
-      result = result.join("-");
-      break;
-    case "snake":
-      result = result.join("_");
-      break;
-    default:
-      throw new Error("converter is out of allowed converters");
-  }
-
-  return result;
 };
 
 /**
@@ -165,36 +91,6 @@ export const stringConverter = (inputString, convertTo) => {
  * @return {string}
  */
 export const stringConverterReversed = (inputString, convertFrom) => {
-  /**
-   * @property {string} result
-   */
-  let result;
-
-  let inputStringList = Array.from(inputString);
-
-  const capitalLetersIterator = inputString.matchAll(/[A-Z]/g);
-
-  if (!convertFrom) throw new Error("specify the type of converter");
-  switch (convertFrom) {
-    case "pascal":
-    case "camel":
-      const list = Array.from(capitalLetersIterator);
-      for (let match of list) {
-        inputStringList[match.index] = ` ${match[0].toLowerCase()}`;
-      }
-      result = inputStringList.join("").trim();
-      break;
-    case "kebab":
-      result = inputString.replaceAll("-", " ");
-      break;
-    case "snake":
-      result = inputString.replaceAll("_", " ");
-      break;
-    default:
-      throw new Error("convert form is not allwed");
-  }
-
-  return result;
 };
 
 /**
@@ -206,14 +102,9 @@ export const stringConverterReversed = (inputString, convertFrom) => {
  * @returns {string}
  */
 export const alphabetical = (inputString) => {
-  return Array.from(inputString.toLowerCase().split(" ").join(""))
-    .toSorted()
-    .join("");
 };
 
 export const alphabeticalUnique = (inputString) => {
-  const stringsSet = new Set(inputString.split(" ").join(""));
-  return Array.from(stringsSet).toSorted().join("");
 };
 
 /**
@@ -224,22 +115,4 @@ export const alphabeticalUnique = (inputString) => {
  * @return {Record<string, number>}
  */
 export const mostRepeated = (inputString) => {
-  const iterable = inputString.toLowerCase().split(" ").join("");
-  const sorted = Array.from(iterable).sort();
-
-  const objectOfLettersWithCount = {};
-
-  for (const letter of sorted) {
-    if (!(letter in objectOfLettersWithCount)) {
-      objectOfLettersWithCount[letter] = 1;
-      continue;
-    }
-    ++objectOfLettersWithCount[letter];
-  }
-
-  const ordered = Object.entries(objectOfLettersWithCount).sort(
-    ([, a], [, b]) => b - a
-  );
-
-  return Object.fromEntries([ordered[0]]);
 };
