@@ -25,8 +25,8 @@ describe("reduce", () => {
 
   it("findTheLongestDescription", () => {
     const person = findTheLongestDescription(users);
-    assert.strictEqual(person._id, "6609132533c5a8fd7bfa7be6");
-    assert.strictEqual(person.about.length, 185);
+    assert.strictEqual(person._id, "660913259f46114d2b8cb4f0");
+    assert.strictEqual(person.about.length, 483);
   });
 
   it("aggregateByName", () => {
