@@ -52,3 +52,57 @@ export const countTotalPopulationGroupedByAlphabet = (citiesList) => {};
  * @param {import('../../data/cities-list').citiesList} citiesList
  */
 export const createAlphabeticalCollection = (citiesList) => {};
+
+/**
+ * Write a function to check if one of the rows of the matrix
+ * have all cells filled with the same charcters (null, undefined treated as no value)
+ * Example 1 - should return false because no row have data in it
+ * [
+ *  [undefined, undefined, undefined],
+ *  [undefined, undefined, undefined],
+ *  [undefined, undefined, undefined],
+ * ]
+ * 
+ * Example 2 - should return true because one row have data of the equal values
+ * [
+ *  [undefined, undefined, undefined],
+ *  [1,         1,         1        ],
+ *  [undefined, undefined, undefined],
+ * ] 
+ *
+ * 
+ * @param {Array<Array<undefined|null|number>>} matrix
+ * 
+ * @returns {Boolean} 
+ */
+
+export const isMatrixRowFilled = (matrix) => {
+}
+
+
+/**
+ * Write a function to check if one of the rows of the matrix
+ * have all cells filled with the same charcters (null, undefined treated as no value)
+ * Example 1 - should return false because no row have data in it
+ * [
+ *  [undefined, undefined, undefined],
+ *  [undefined, undefined, undefined],
+ *  [undefined, undefined, undefined],
+ * ]
+ * 
+ * Example 2 - should return true because one cell have data
+ * [
+ *  [1,         undefined, undefined],
+ *  [1,         undefined, undefined],
+ *  [1,         undefined, undefined],
+ * ] 
+ *
+ * 
+ * 
+ * @param {Array<Array<undefined|null|number>>} matrix
+ * 
+ * @returns {Boolean} 
+ */
+
+export const isMatrixColumnFilled = (matrix) => {
+}

@@ -5,6 +5,8 @@ import {
   countTotalPopulationGroupedByAlphabet,
   createAlphabeticalCollection,
   getCitiesWithPopulationMoreThenCriteria,
+  isMatrixRowFilled,
+  isMatrixColumnFilled
 } from "../../exercises/array-collection/combined.methods.js";
 
 describe("Combined methods", () => {
@@ -82,4 +84,79 @@ describe("Combined methods", () => {
       assert.ok(population > 12500000);
     });
   });
+
+
+  it("isMatrixRowFilled should return false as no values provided in matrix", () => {
+    const matrix = [
+      [undefined, undefined, undefined],
+      [undefined, undefined, undefined],
+      [undefined, undefined, undefined],
+    ]
+
+    const result = isMatrixRowFilled(matrix)
+
+    assert.deepEqual(result, false, 'Result should be false')
+  })
+
+
+  it("isMatrixRowFilled should return false when row not contain equal values", () => {
+    const matrix = [
+      [undefined, undefined, undefined],
+      [1, 1, 2],
+      [undefined, undefined, undefined],
+    ]
+
+    const result = isMatrixRowFilled(matrix)
+
+    assert.deepEqual(result, false, 'Result should be false')
+  })
+
+  it("isMatrixRowFilled should return true when at least one row is filled with equal number", () => {
+    const matrix = [
+      [undefined, undefined, undefined],
+      [1, 1, 1],
+      [undefined, undefined, undefined],
+    ]
+
+    const result = isMatrixRowFilled(matrix)
+
+    assert.deepEqual(result, true, 'Result should be true')
+  })
+
+
+  it("isMatrixColumnFilled should return false when no data in columns are present", () => {
+    const matrix = [
+      [undefined, undefined, undefined],
+      [undefined, undefined, undefined],
+      [undefined, undefined, undefined],
+    ]
+
+    const result = isMatrixColumnFilled(matrix)
+
+    assert.deepEqual(result, false, 'Result should be false when no data in matrix')
+  })
+
+    it("isMatrixColumnFilled should return true when column is filled with the same data", () => {
+    const matrix = [
+      [undefined, 1, undefined],
+      [undefined, 1, undefined],
+      [undefined, 1, undefined],
+    ]
+
+    const result = isMatrixColumnFilled(matrix)
+
+    assert.deepEqual(result, true, 'Result should be true when one collumn is filled wwith the same data')
+  })
+
+     it("isMatrixColumnFilled should return false when column is filled with different data", () => {
+    const matrix = [
+      [undefined, 1, undefined],
+      [undefined, 2, undefined],
+      [undefined, 4, undefined],
+    ]
+
+    const result = isMatrixColumnFilled(matrix)
+
+    assert.deepEqual(result, false, 'Result should be false when columns values are not the same')
+  })
 });
